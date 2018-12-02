@@ -7,7 +7,7 @@ func plusOne(digits []int) []int {
 		if (digits[i] == 9 && add_next == 1) {
 			digits[i] = 0
 			add_next = 1
-			if i==0{
+			if i == 0 {
 				//append(digits, 1)
 			}
 		} else if digits[i] != 9 {
@@ -26,7 +26,7 @@ func plusOne(digits []int) []int {
 
 func main() {
 	a := []int{0}
-	result:=plusOne(a)
+	result := plusOne(a)
 	print(result[0])
 
 }
