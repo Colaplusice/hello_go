@@ -5,3 +5,9 @@
 你可以不使用循环或者递归，且在 O(1) 时间复杂度内解决这个问题吗？
 
 结果只可能是0-9之间的数，那么结果是哪个呢，取余9
+
+## 最大的值
+const MaxUint = ^uint(0)
+const MinUint = 0
+const MaxInt = int(MaxUint >> 1)
+const MinInt = -MaxInt - 1
