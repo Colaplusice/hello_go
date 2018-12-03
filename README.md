@@ -25,3 +25,7 @@ int to string 	y:=fmt.Sprintf("%d",x)  	print(strconv.Itoa(a))
 	fmt.Println(strings.Repeat(a,2))
 
 slice
+
+向上取整：
+官方的math 包中提供了取整的方法，向上取整math.Ceil() ，向下取整math.Floor()
+
