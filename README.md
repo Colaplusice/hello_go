@@ -1,8 +1,8 @@
 # hello go
 
-
 ## 语法
 
+### map
 
 判断dict key 是否存在
 if _, ok := map1[key1]; ok {
@@ -25,3 +25,13 @@ int to string 	y:=fmt.Sprintf("%d",x)  	print(strconv.Itoa(a))
 	fmt.Println(strings.Repeat(a,2))
 
 slice
+
+### 初始化map
+
+n := map[string]int{"foo": 1, "bar": 2}
+删除
+delete(m, "k2")
+
+
+
+## goland 编译同一个package下的所有文件

@@ -1,9 +1,9 @@
 package main
 
 import (
-	"os"
 	"bufio"
 	"fmt"
+	"os"
 )
 
 func countlines(f *os.File, counts map[string]int) {
