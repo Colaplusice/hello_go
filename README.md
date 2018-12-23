@@ -11,7 +11,9 @@ if _, ok := map1[key1]; ok {
 
 while  用for代替
 
-int to string 	`y:=fmt.Sprintf("%d",x) print(strconv.Itoa(a))`
+int2string 	`y:=fmt.Sprintf("%d",x) print(strconv.Itoa(a))`
+string2int `	a,_:=strconv.Atoi("123")`
+
 类型判断  t := reflect.TypeOf(3) // a reflect.Type
 遍历字符串
 ```

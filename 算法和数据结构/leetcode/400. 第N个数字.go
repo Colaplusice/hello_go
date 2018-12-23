@@ -1,6 +1,9 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"strconv"
+)
 
 func findNthDigit(n int) int {
 	i := 1
@@ -10,14 +13,24 @@ func findNthDigit(n int) int {
 		commands *= 10
 		i++
 	}
-	n /= i
-	offset := n
+	commands -= 1
 	divid := n % (i)
-	numbers := commands + offset - 1
-	return numbers % (1 * (divid) * 10)
+	n /= i
+
+	offset := n
+	numbers := commands + offset
+	str_number := strconv.Itoa(numbers)
+	if divid == 0 {
+		result, _ := strconv.Atoi(string(str_number[len(str_number)-divid-1]))
+		return result
+	} else {
+		str_number := strconv.Itoa(numbers + 1)
+		result, _ := strconv.Atoi(string(str_number[divid-1]))
+		return result
+	}
 }
 
 func main() {
-	res := findNthDigit(3)
+	res := findNthDigit(28)
 	fmt.Println(res)
 }
