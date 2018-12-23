@@ -29,3 +29,19 @@ const MinInt = -MaxInt - 1
 容器的宽度，而不会对容器的高度有任何的影响。
 
 
+## 400 第N个数字
+
+不难，就是有点麻烦，需要找到规律，以9为分界值，1位数有9个，二位数的数字有90个，三位数的数字900个，以此类推。
+然后理清边界值条件。主要麻烦的地方应该在go语言，
+字符串和数组的相互转换上。当然这就是我用go语言答题的目的，熟悉语法和常见的用法。
+
+
+## 746 使用最小花费爬楼梯
+
+动态规划问题，每次只能走一步，或者走两步，找出到达楼梯顶的最小值。有一点不同的地方在于，
+离楼梯顶只差一步的情况时，可以直接迈上顶部。不需要去加最后一个台阶。
+状态转移方程:
+
+result[index]= min {result[index-2]+cost[index],result[index-1]+cost[index]}; index<len(cost)-1
+result[index]= min {result[index-2]+cost[index],result[index-1]}; index==len(cost)-1
+ 

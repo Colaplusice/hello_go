@@ -9,6 +9,9 @@ if _, ok := map1[key1]; ok {
 // ...
 }
 
+数组:   var a [5]int  a:=[]int{1,2,3,4}
+result := make([]int, len(cost)) 不能在有计算的东西，用var来赋值
+
 while  用for代替
 
 int2string 	`y:=fmt.Sprintf("%d",x) print(strconv.Itoa(a))`
