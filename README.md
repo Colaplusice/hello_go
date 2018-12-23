@@ -30,6 +30,12 @@ for i := 0; i < len(previous); i ++ {
 
 ### 初始化map
 
+slice
+
+向上取整：
+官方的math 包中提供了取整的方法，向上取整math.Ceil() ，向下取整math.Floor()
+
+
 n := map[string]int{"foo": 1, "bar": 2}
 删除
 delete(m, "k2")
