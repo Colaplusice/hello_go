@@ -45,3 +45,28 @@ const MinInt = -MaxInt - 1
 result[index]= min {result[index-2]+cost[index],result[index-1]+cost[index]}; index<len(cost)-1
 result[index]= min {result[index-2]+cost[index],result[index-1]}; index==len(cost)-1
  
+
+## 213. 打家劫舍 II
+
+同样的动态规划问题，难点有2:
+1. 如果搜了第一间房屋，就不能再搜最后一件房屋。因为他们是环形的。
+你不能同时搜连着的两间房屋。所以要分两种情况去计算，第一间搜，和第一间不搜
+2. 如何找到最优的搜索路径，在一的约束下。状态转移方程和之前不太一样:
+max_value={nums[index]+value[i-2],value[i-1]} 在当前这间房子和
+往前两间的最大值加起来。如果最大值超过了前一间的最大值。那么这间房子是值得搜的。
+result[i]=nums[i]+result[i-2]的值。否则房子是不值得搜的，result[i]的值就为
+result[i-1]的值。 主要是比较难理解吧，加了一个约束条件，我也走了不少弯路。。
+  
+
+
+## 169. 求众数
+
+找出出现次数大于1/2的数  空间O(1) 时间O(n)
+
+遍历所有数，用i记录出现的频率，value代表当前数。result代表要返回的数，
+每当遍历到一个数和results不相同时，i-=1.当i减到小于0时，用当前的数来代替
+i。最后的结果一定是那个众数。因为只有他大于等于1/2。就算其他数和他交叉
+每次都减。最后也是他。
+
+
+
